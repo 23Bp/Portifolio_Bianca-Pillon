@@ -1,0 +1,580 @@
+/*COMANDOS GERAIS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Righteous&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: black;
+}
+
+
+/* COMANDO DE TRANSIÃ‡Ã•ES */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+
+/*COMANDOS DO MENU - NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+
+/*COMANDO LOGO */
+
+.logo {
+    display: flex;
+}
+
+.header_logo {
+    width: 100px;
+    height: 100%;
+    margin: 0;
+}
+
+
+/* MENU HAMBURGUER*/
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+    opacity: 1;
+}
+
+
+/*SEÃ‡ÃƒO*/
+
+section {
+    padding-top: 4vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+
+/*SEÃ‡ÃƒO PROFILE*/
+#profile .section_foto-container {
+    width: 50%;
+}
+#profile .section_foto-container img{
+    width: 100%;
+    height: auto!important;
+}
+#profile .section_text {
+    width: 50%;
+}
+
+#profile .title {
+    color: rgb(90, 47, 99);
+    margin-bottom: 3px;
+    font-size: 48px;
+    font-family: 'Trebuchet MS';
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+
+.section_text {
+    align-self: center;
+    text-align: center;
+}
+
+.section_text_p1 {
+    font-weight: 600;
+}
+
+.section_text_p2 {
+    font-size: .75;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 32px;
+    text-align: center;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem
+}
+
+
+/*SEÃ‡ÃƒO ICONES*/
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+
+/*SEÃ‡ÃƒO SOBRE MIM*/
+
+#Sou {
+    position: relative;
+}
+
+#Sou .title {
+    color: rgb(82, 1, 75);
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-family: 'Trebuchet MS';
+}
+
+
+/*SEÃ‡ÃƒO SOBRE JORNADA*/
+
+#Jornada {
+    position: relative;
+}
+
+
+#Jornada .title {
+    font-family: 'Trebuchet MS';
+    color: rgb(82, 1, 75);
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+
+/*SEÃ‡ÃƒO SOBRE APRENDIZADOS*/
+
+#Aprendizados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: auto;
+}
+
+#competencias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza horizontalmente as divs */
+    align-items: stretch;
+    text-align: center;
+}
+
+.boxAprendizado {
+    flex-basis: calc(25% - 20px);
+    margin: 10px;
+}
+
+.icon_img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 24px;
+    /* Tamanho da fonte em telas maiores, numero arbitrÃ¡rio */
+    margin-bottom: 10px;
+    /* EspaÃ§amento inferior para separar o tÃ­tulo das divs, numero arbitrÃ¡rio levando em conta os 10px jÃ¡ adicionados*/
+}
+
+
+/* Estilos para telas menores (mÃ­dia query) */
+/* HEADER */
+#desktop-nav {
+    display: flex;
+}
+
+
+
+
+
+/* .col {
+    flex: 1 0 auto;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.col-12 {
+    width: 100%;
+} */
+
+article .icon_img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/*SEÃ‡ÃƒO SOBRE PROJETOS*/
+
+
+/* ConfiguraÃ§Ã£o do tÃ­tulo da section */
+
+#Aprendizados .title {
+    color: rgb(82, 1, 75);
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-family: 'Trebuchet MS';
+}
+
+
+/* ConfiguraÃ§Ã£o da grid de projetos */
+
+#Projetos .title {
+    color: rgb(82, 1, 75);
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-family: 'Trebuchet MS';
+}
+
+#Projetos .projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#Projetos .projetos>div {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#Projetos .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#Projetos .card img {
+    width: 100%;
+    /* Adicionei apenas para padronizar as imagens idependente do tamanho original dela, mas quebra na responsividade */
+    max-height: 179px;
+}
+
+#Projetos .container {
+    text-align: center;
+}
+
+
+.btnSite {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: rgb(117, 0, 128);
+}
+
+.btnSite:hover {
+    background: #fbd9fd;
+}
+
+
+/*SEÃ‡ÃƒO SOBRE DEPOIMENTO*/
+
+#Depoimento .title {
+    color: rgb(82, 1, 75);
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-family: 'Trebuchet MS';
+}
+
+.video{
+    display: none;
+}
+
+
+
+.video {
+    background-image: url(IMAGENS/4595107-back-to-the-future-science-fiction-movies-time-travel-artwork-minimalism.jpg);
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
+    background-color: initial;
+}
+
+.video {
+    display: block;
+}
+
+.video .tamanho {
+    border-radius: .8em;
+    margin-bottom: 1em;
+}
+
+.video {
+    padding-bottom: 1.5em;
+    padding-left: em;
+    padding-right: 1em;
+    line-height: 1.5em;
+    margin: 0 auto;
+    width: 500px;
+ 
+
+}
+
+.video div {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+
+/* SESSÃO CONTATO */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+#Contato .title{
+  color: rgb(82, 1, 75);
+  margin-bottom: 15px;
+  font-size: 32px; 
+  font-family: 'Trebuchet MS';
+}
+
+
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  
+
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+  
+  /* FOOTER SECTION */
+  
+  footer {
+    height: 26vh;
+    margin: 0 1rem;
+  }
+  
+  footer p {
+    text-align: center;
+  }
+
+
+
+
+@media (max-width: 768px) {
+    #desktop-nav {
+        display: none!important;
+    }
+    
+    #hamburger-nav {
+        display: flex!important;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0, 0.2);
+        margin-bottom: 1rem;
+    }
+    #hamburger-nav > a {
+        width: 60px;
+    }
+    #hamburger-nav a img {
+        width: 100%;
+        height: auto!important;
+    }
+    
+    
+    .menu-links {
+        position: absolute;
+        left: -100vw;
+        width: 100vw;
+        background: #FFF;
+        top: 95px;
+        text-align: left;
+        transition: all .5s ease;
+        height: calc(100vh - 95px);
+    }
+
+    .open-menu {
+        transition: all .5s ease;
+        left: 0;
+    }
+
+
+
+    .title {
+        font-size: 18px;
+        /* Tamanho da fonte em telas menores */
+        margin-bottom: 5px;
+        /* EspaÃ§amento inferior reduzido, numero arbitrÃ¡rio levando em conta os 10px jÃ¡ adicionados */
+    }
+    .column {
+        width: 100%;
+        display: block;
+    }
+    section {
+        margin: 0 0 20px 0;
+        padding: 0 20px;
+    }
+
+    /* PROFILE */
+    #profile {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+    #profile .section_foto-container {
+        width: 80%;
+    }
+    #profile .section_text {
+        width: 100%;
+    }
+
+    /* DEPOIMENTOS     */
+    #Depoimento .video{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    #Depoimento .video iframe{
+        width: 100%;
+    }
+
+    /* CONTATO */
+    #Contato .contact-info-upper-container {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    #Contato .contact-info-upper-container .contact-info-container{
+        margin: 0;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    
+
+}
